@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input , OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-meu-primeiro-component',
@@ -6,11 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meu-primeiro-component.component.scss']
 })
 export class MeuPrimeiroComponentComponent implements OnInit {
+  @Input() textoBotao!: string;
+  @Input() tamanho!: string;
 
-  testTwoWayDataBind = 1;
-  constructor() { }
+  testTwoWayDataBind: string = '10';
+
+  constructor() {
+    this.testTwoWayDataBind = this.tamanho;
+  }
+
+
 
   ngOnInit(): void {
+    this.testTwoWayDataBind = this.tamanho;
+    console.log(this.textoBotao);
   }
 
 }

@@ -1,7 +1,8 @@
-<p>meu-primeiro-component works!</p>
-<button [ngStyle]=" {
-    fontSize: testTwoWayDataBind +'px'
+<button appMyDirective [textContent]="'TESTE DO BRUNO'" [ngStyle]=" {
+    fonts: 'Arial'
  }
-">blabla</button>
+"></button>
 {{testTwoWayDataBind}}
 <input text="testTwoWayDataBind" [(ngModel)]="testTwoWayDataBind">
+<!-- fontSize: testTwoWayDataBind +'px' -->
+
